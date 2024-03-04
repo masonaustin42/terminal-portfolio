@@ -23,7 +23,16 @@ const App: FC = () => {
   };
 
   return (
-    <div className="App">
+    <div
+      className="App"
+      id="App"
+      onClickCapture={() => {
+        const input = document.getElementById("command-input");
+        if (input) {
+          input.focus();
+        }
+      }}
+    >
       <Output output={output} />
       <Input
         output={output}
