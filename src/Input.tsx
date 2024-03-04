@@ -28,21 +28,23 @@ const Input: FC<Props> = ({
   const commandInput = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.repeat) return;
     if (e.key === "ArrowUp") {
-      if (commandHistoryIndex < commandHistory.length) {
+      if (commandHistoryIndex > 0) {
+        setCommandHistoryIndex(commandHistoryIndex - 1);
         setInput(commandHistory[commandHistoryIndex]);
+      } else {
+        setCommandHistoryIndex(0);
+        setInput(commandHistory[0] || "");
+      }
+    } else if (e.key === "ArrowDown") {
+      if (commandHistory.length === 0 || commandHistory.length === 1) return;
+      if (commandHistoryIndex <= commandHistory.length - 2) {
+        setInput(commandHistory[commandHistoryIndex + 1]);
         setCommandHistoryIndex(commandHistoryIndex + 1);
       }
-    }
-    if (e.key === "ArrowDown") {
-      if (commandHistoryIndex > 0) {
-        setInput(commandHistory[commandHistoryIndex - 1]);
-        setCommandHistoryIndex(commandHistoryIndex - 1);
-      }
-    }
-    if (e.key === "Enter") {
+    } else if (e.key === "Enter") {
       const newCommandHistory = [...commandHistory, input];
       setCommandHistory(newCommandHistory);
-      setCommandHistoryIndex(commandHistory.length - 1);
+      setCommandHistoryIndex(commandHistory.length);
       const newOutput = [...output];
       newOutput.push([true, input]);
       newOutput.push([false, executeCommand(input, assignUsername)]);
