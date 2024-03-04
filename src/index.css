@@ -3,8 +3,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: black;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -23,6 +23,7 @@ a:hover {
 
 input,
 p {
+  color: white;
   font-family: monospace, Arial, Helvetica, sans-serif;
   font-weight: 400;
   background-color: transparent;
