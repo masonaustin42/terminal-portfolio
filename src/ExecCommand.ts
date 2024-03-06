@@ -14,6 +14,8 @@ const executeCommand = (command: string, assignUsername: Function) => {
           return "projects: prints a list of my projects";
         case "setusername":
           return "setusername [username]: sets a username for the terminal";
+        case "visual":
+          return "visual: opens a new tab with a more traditional visual portfolio";
         case "email":
         case "phone":
         case "github":
@@ -26,7 +28,8 @@ const executeCommand = (command: string, assignUsername: Function) => {
           clear
           contact
           projects
-          setusername`;
+          setusername
+          visual`;
       }
     case "about":
       return "Hello! I'm Mason, a software developer from Seattle.";
@@ -63,6 +66,9 @@ const executeCommand = (command: string, assignUsername: Function) => {
       return "filmmakr";
     case "savoryscoot":
       return "savoryscoot";
+    case "visual":
+      window.open("https://masonaustin42.github.io/", "_blank");
+      return "opening visual portfolio...";
     default:
       return "Command not found, please type 'help' for a list of available commands";
   }

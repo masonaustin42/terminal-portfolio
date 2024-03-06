@@ -6,11 +6,7 @@ import Input from "./Input";
 type command = [isCommandInput: boolean, string];
 export type { command };
 const App: FC = () => {
-  const defaultCommand = [
-    false,
-    `Welcome to Mason Austin's portfolio!
-    Type 'help' for a list of available commands`,
-  ];
+  const defaultCommand = [false, `default`];
   const [output, setOutput] = useState([defaultCommand] as command[]);
   const [input, setInput] = useState("");
   const [commandHistory, setCommandHistory] = useState([] as string[]);

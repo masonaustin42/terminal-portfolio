@@ -24,6 +24,21 @@ const Output: FC<Props> = ({ output }) => {
           );
         } else {
           if (command[1] === "") return null;
+          if (command[1] === "default") {
+            return (
+              <>
+                <p>Welcome to Mason Austin's portfolio!</p>
+                <p>Type "help" for a list of available commands</p>
+                <p>
+                  If you prefer a more traditional and visual portfolio
+                  experience, enter [visual] or{" "}
+                  <a target="_blank" href="https://masonaustin42.github.io/">
+                    click here
+                  </a>
+                </p>
+              </>
+            );
+          }
           if (command[1] === "contact-info")
             return (
               <>
