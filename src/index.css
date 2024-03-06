@@ -32,6 +32,16 @@ p {
   margin: 0;
 }
 
+p {
+  width: 95%;
+  text-align: left;
+  padding-left: 30px;
+}
+
+#command-input {
+  width: 65%;
+}
+
 input:focus {
   outline: none;
 }
