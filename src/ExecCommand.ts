@@ -35,7 +35,8 @@ const executeCommand = (command: string, assignUsername: Function) => {
     case "contact":
       return `contact-info`;
     case "setusername":
-      if (args.length < 2) return "Please provide a username";
+      if (args.length < 2)
+        return "Err: No username provided. Usage: setusername [username]";
       assignUsername(args[1]);
       return `Username set to ${args[1]}`;
     case "github":
@@ -53,6 +54,15 @@ const executeCommand = (command: string, assignUsername: Function) => {
     case "phone":
       window.open("tel:360-328-4137", "_blank");
       return "opening phone app...";
+    case "projects":
+      return `Here are some projects I have worked on!
+      Enter [project] for more information on a specific project
+        - Filmmakr
+        - SavoryScoot`;
+    case "filmmakr":
+      return "filmmakr";
+    case "savoryscoot":
+      return "savoryscoot";
     default:
       return "Command not found, please type 'help' for a list of available commands";
   }
