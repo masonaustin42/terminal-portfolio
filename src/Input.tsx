@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC, useState, useEffect } from "react";
 import { command } from "./App";
 import executeCommand from "./ExecCommand";
 
@@ -24,6 +24,10 @@ const Input: FC<Props> = ({
   assignUsername,
 }) => {
   const [commandHistoryIndex, setCommandHistoryIndex] = useState(0);
+
+  useEffect(() => {
+    window.scrollTo(0, document.body.scrollHeight);
+  }, [output]);
 
   const commandInput = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.repeat) return;
@@ -52,6 +56,7 @@ const Input: FC<Props> = ({
       else setOutput(newOutput);
       setInput("");
     }
+    window.scrollTo(0, document.body.scrollHeight);
   };
 
   return (
