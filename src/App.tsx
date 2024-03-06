@@ -10,7 +10,11 @@ const App: FC = () => {
   const [output, setOutput] = useState([defaultCommand] as command[]);
   const [input, setInput] = useState("");
   const [commandHistory, setCommandHistory] = useState([] as string[]);
-  const user = window.localStorage.getItem("username") || "newuser";
+  let user = window.localStorage.getItem("username");
+  if (user === null) {
+    window.localStorage.setItem("username", "newuser");
+    user = "newuser";
+  }
   const [username, setUsername] = useState(user);
 
   const assignUsername = (name: string): void => {
