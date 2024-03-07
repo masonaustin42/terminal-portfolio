@@ -32,7 +32,7 @@ const executeCommand = (command: string, assignUsername: Function) => {
           visual`;
       }
     case "about":
-      return "Hello! I'm Mason, a software developer from Seattle.";
+      return "about";
     case "clear":
       return "";
     case "contact":
@@ -59,7 +59,7 @@ const executeCommand = (command: string, assignUsername: Function) => {
       return "opening phone app...";
     case "projects":
       return `Here are some projects I have worked on!
-      Enter [project] for more information on a specific project
+      Enter a project name for more information on a specific project
         - Filmmakr
         - SavoryScoot`;
     case "filmmakr":

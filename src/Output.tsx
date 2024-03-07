@@ -39,6 +39,48 @@ const Output: FC<Props> = ({ output }) => {
               </>
             );
           }
+          if (command[1] === "about") {
+            return (
+              <>
+                <br />
+                <p>
+                  Hello! I'm Mason, a software engineer based in Seattle,
+                  Washington. I was born and raised as a musician, playing the
+                  piano since I can remember. My journey after high school led
+                  me to pursue Audio Engineering at UW, delving into the
+                  intricate world of sound. After that I transitioned into the
+                  role of an Electrician and Audio Visual Technician, honing my
+                  skills in speaker installations, TV setups, and intricate
+                  cable work. I was then promoted to the role of programming and
+                  fine-tuning audio DSP systems, configuring AV networks, and
+                  delving into lua scripting. Scripting was my favorite part of
+                  this promotion, although it unfortunately wasn't the focal
+                  point of my job.
+                </p>
+                <br />
+                <p>
+                  Seeking a more code-centric environment, I made the leap to
+                  App Academy, a 6 month coding bootcamp. Here, I engaged in
+                  diverse projects, among them a collaborative effort involving
+                  the development of an UberEats clone. Our team, comprising
+                  myself and three peers, crafted a responsive web application
+                  using React for the frontend, Flask to power the backend, and
+                  leveraged PostGres for a robust restaurant database.
+                  Additionally, we seamlessly integrated AWS for efficient
+                  storage of restaurant and food item images.
+                </p>
+                <br />
+                <p>
+                  The experience of collaborating within my cohort and
+                  witnessing the rapid deployment of a feature-rich web app
+                  within a week was immensely gratifying. It's these experiences
+                  that fuel my pride in the contributions I make to impactful
+                  projects.
+                </p>
+                <br />
+              </>
+            );
+          }
           if (command[1] === "contact-info")
             return (
               <>
