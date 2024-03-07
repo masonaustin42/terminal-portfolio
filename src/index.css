@@ -54,3 +54,20 @@ body {
   min-height: 100vh;
   background-color: black;
 }
+
+#click-capture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  input,
+  p,
+  a {
+    font-size: 20px;
+  }
+}

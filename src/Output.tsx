@@ -31,7 +31,7 @@ const Output: FC<Props> = ({ output }) => {
                 <p>Type "help" for a list of available commands</p>
                 <p>
                   If you prefer a more traditional and visual portfolio
-                  experience, enter [visual] or{" "}
+                  experience, enter "visual" or{" "}
                   <a target="_blank" href="https://masonaustin42.github.io/">
                     click here
                   </a>
@@ -47,20 +47,20 @@ const Output: FC<Props> = ({ output }) => {
                   Hello! I'm Mason, a software engineer based in Seattle,
                   Washington. I was born and raised as a musician, playing the
                   piano since I can remember. My journey after high school led
-                  me to pursue Audio Engineering at UW, delving into the
-                  intricate world of sound. After that I transitioned into the
-                  role of an Electrician and Audio Visual Technician, honing my
-                  skills in speaker installations, TV setups, and intricate
-                  cable work. I was then promoted to the role of programming and
-                  fine-tuning audio DSP systems, configuring AV networks, and
-                  delving into lua scripting. Scripting was my favorite part of
-                  this promotion, although it unfortunately wasn't the focal
-                  point of my job.
+                  me to pursue Audio Engineering at the University of
+                  Washington, delving into the intricate world of sound. After
+                  that I transitioned into the role of an Electrician and Audio
+                  Visual Technician, honing my skills in speaker installations,
+                  TV setups, and intricate cable work. I was then promoted to
+                  the role of programming and fine-tuning audio DSP systems,
+                  configuring AV networks, and delving into lua scripting.
+                  Scripting was my favorite part of this promotion, although it
+                  unfortunately wasn't the focal point of my job.
                 </p>
                 <br />
                 <p>
                   Seeking a more code-centric environment, I made the leap to
-                  App Academy, a 6 month coding bootcamp. Here, I engaged in
+                  App Academy, a 6 month coding boot camp. Here, I engaged in
                   diverse projects, among them a collaborative effort involving
                   the development of an UberEats clone. Our team, comprising
                   myself and three peers, crafted a responsive web application

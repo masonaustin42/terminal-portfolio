@@ -24,8 +24,7 @@ const App: FC = () => {
 
   return (
     <div
-      className="App"
-      id="App"
+      id="click-capture"
       onClickCapture={() => {
         const input = document.getElementById("command-input");
         if (input) {
@@ -33,17 +32,19 @@ const App: FC = () => {
         }
       }}
     >
-      <Output output={output} />
-      <Input
-        output={output}
-        setOutput={setOutput}
-        input={input}
-        setInput={setInput}
-        commandHistory={commandHistory}
-        setCommandHistory={setCommandHistory}
-        username={username}
-        assignUsername={assignUsername}
-      />
+      <div className="App" id="App">
+        <Output output={output} />
+        <Input
+          output={output}
+          setOutput={setOutput}
+          input={input}
+          setInput={setInput}
+          commandHistory={commandHistory}
+          setCommandHistory={setCommandHistory}
+          username={username}
+          assignUsername={assignUsername}
+        />
+      </div>
     </div>
   );
 };

@@ -22,7 +22,7 @@ const executeCommand = (command: string, assignUsername: Function) => {
         case "linkedin":
           return `${args[1]}: opens a link to my ${args[1]}`;
         default:
-          return `Enter help [command] for more information on a specific command
+          return `Enter "help [command]" for more information on a specific command
           Available commands: 
           about
           clear
@@ -70,7 +70,7 @@ const executeCommand = (command: string, assignUsername: Function) => {
       window.open("https://masonaustin42.github.io/", "_blank");
       return "opening visual portfolio...";
     default:
-      return "Command not found, please type 'help' for a list of available commands";
+      return `Command not found, please type "help" for a list of available commands`;
   }
 };
 
