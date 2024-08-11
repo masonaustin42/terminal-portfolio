@@ -16,6 +16,8 @@ const executeCommand = (command: string, assignUsername: Function) => {
           return "setusername [username]: sets a username for the terminal";
         case "visual":
           return "visual: opens a new tab with a more traditional visual portfolio";
+        case "resume":
+          return "resume: downloads my resume";
         case "email":
         case "phone":
         case "github":
@@ -28,6 +30,7 @@ const executeCommand = (command: string, assignUsername: Function) => {
           clear
           contact
           projects
+          resume
           setusername
           visual`;
       }
@@ -51,6 +54,12 @@ const executeCommand = (command: string, assignUsername: Function) => {
         "_blank"
       );
       return "opening LinkedIn profile...";
+    case "resume":
+      const link = document.createElement("a");
+      link.href = "files/resume.pdf";
+      link.setAttribute("download", "MasonAustinResume.pdf");
+      link.click();
+      return "downloading resume...";
     case "email":
       window.open("mailto:masonaustin42@gmail.com", "_blank");
       return "opening email client...";
